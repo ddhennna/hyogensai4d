@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4年D組企画「俺だけオフライン」- 表現祭2025</title>
+    <title>4年D組企画「俺だけオフライン」</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,55 +11,15 @@
     <style>
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            background-color: #0d0d2b;
-            color: #e0e0e0;
-            background-image:
-                radial-gradient(circle at 10% 90%, rgba(100, 100, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 10%, rgba(255, 100, 100, 0.15) 0%, transparent 40%);
-            background-attachment: fixed;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+            overflow-x: hidden;
         }
-
-        #title-background {
-            background: url('TSU413023_TP_V.png') center center / cover no-repeat;
-            filter: brightness(0.5);
-        }
-
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .neon-text-blue {
-            text-shadow:
-                0 0 5px rgba(0, 191, 255, 0.8),
-                0 0 10px rgba(0, 191, 255, 0.8),
-                0 0 20px rgba(0, 191, 255, 0.8),
-                0 0 40px #00bfff,
-                0 0 80px #00bfff;
-        }
-        
-        .card {
-            background: rgba(10, 10, 30, 0.7);
-            border: 1px solid rgba(130, 130, 220, 0.3);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            box-shadow: 0 0 30px rgba(130, 130, 220, 0.3);
-            transform: translateY(-5px);
-        }
-
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
         .glitch {
-            animation: glitch 1.5s linear infinite;
+            position: relative;
+            color: white;
         }
-
-        @keyframes glitch {
-            2%, 64% { transform: translate(2px, 0) skew(0deg); }
-            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
-            62% { transform: translate(0, 0) skew(5deg); }
-        }
-
         .glitch:before,
         .glitch:after {
             content: attr(data-text);
@@ -68,75 +28,66 @@
             left: 0;
             width: 100%;
             height: 100%;
+            background: #0a0a0a;
+            overflow: hidden;
         }
-
         .glitch:before {
             left: 2px;
-            text-shadow: -2px 0 #ff00c1;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
+            text-shadow: -2px 0 red;
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
         }
-
         .glitch:after {
             left: -2px;
-            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-            clip: rect(86px, 450px, 91px, 0);
-            animation: glitch-anim-2 5s infinite linear alternate-reverse;
+            text-shadow: -2px 0 blue;
+            animation: glitch-anim-2 2s infinite linear alternate-reverse;
         }
-        
-        @keyframes glitch-anim {
-            0% { clip: rect(46px, 9999px, 9px, 0); }
-            20% { clip: rect(11px, 9999px, 99px, 0); }
-            40% { clip: rect(61px, 9999px, 86px, 0); }
-            60% { clip: rect(35px, 9999px, 20px, 0); }
-            80% { clip: rect(77px, 9999px, 33px, 0); }
-            100% { clip: rect(98px, 9999px, 92px, 0); }
+        @keyframes glitch-anim-1 {
+            0% { clip-path: inset(15% 0 85% 0); } 5% { clip-path: inset(75% 0 10% 0); } 10% { clip-path: inset(30% 0 50% 0); } 15% { clip-path: inset(10% 0 80% 0); } 20% { clip-path: inset(95% 0 2% 0); } 25% { clip-path: inset(50% 0 35% 0); } 30% { clip-path: inset(20% 0 75% 0); } 35% { clip-path: inset(80% 0 5% 0); } 40% { clip-path: inset(40% 0 45% 0); } 45% { clip-path: inset(60% 0 30% 0); } 50% { clip-path: inset(90% 0 5% 0); } 55% { clip-path: inset(10% 0 85% 0); } 60% { clip-path: inset(70% 0 20% 0); } 65% { clip-path: inset(35% 0 55% 0); } 70% { clip-path: inset(5% 0 90% 0); } 75% { clip-path: inset(65% 0 25% 0); } 80% { clip-path: inset(25% 0 70% 0); } 85% { clip-path: inset(85% 0 10% 0); } 90% { clip-path: inset(45% 0 50% 0); } 95% { clip-path: inset(75% 0 15% 0); } 100% { clip-path: inset(5% 0 90% 0); }
         }
-
         @keyframes glitch-anim-2 {
-            0% { clip: rect(61px, 9999px, 86px, 0); }
-            20% { clip: rect(7px, 9999px, 56px, 0); }
-            40% { clip: rect(98px, 9999px, 92px, 0); }
-            60% { clip: rect(46px, 9999px, 9px, 0); }
-            80% { clip: rect(35px, 9999px, 20px, 0); }
-            100% { clip: rect(11px, 9999px, 99px, 0); }
+            0% { clip-path: inset(5% 0 92% 0); } 5% { clip-path: inset(68% 0 12% 0); } 10% { clip-path: inset(28% 0 48% 0); } 15% { clip-path: inset(8% 0 78% 0); } 20% { clip-path: inset(92% 0 4% 0); } 25% { clip-path: inset(48% 0 33% 0); } 30% { clip-path: inset(18% 0 73% 0); } 35% { clip-path: inset(78% 0 7% 0); } 40% { clip-path: inset(38% 0 43% 0); } 45% { clip-path: inset(58% 0 28% 0); } 50% { clip-path: inset(88% 0 7% 0); } 55% { clip-path: inset(8% 0 83% 0); } 60% { clip-path: inset(68% 0 18% 0); } 65% { clip-path: inset(33% 0 53% 0); } 70% { clip-path: inset(3% 0 88% 0); } 75% { clip-path: inset(63% 0 23% 0); } 80% { clip-path: inset(23% 0 68% 0); } 85% { clip-path: inset(83% 0 8% 0); } 90% { clip-path: inset(43% 0 48% 0); } 95% { clip-path: inset(73% 0 13% 0); } 100% { clip-path: inset(3% 0 88% 0); }
         }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInAnimation 0.8s ease-out forwards;
+        #hero {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
         }
-
-        @keyframes fadeInAnimation {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: brightness(0.5);
         }
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(0, 191, 255, 0.5), transparent);
+        .content-card {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        .story-bg-text {
+            position: absolute;
+            font-size: 14rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
-<body class="min-h-screen">
-
-    <div id="title-background" class="fixed top-0 left-0 w-full h-full -z-10 transition-opacity duration-1000 ease-in-out"></div>
-
-    <!-- Header Section -->
-    <header class="py-12 md:py-20 text-center">
-        <div class="container mx-auto px-4">
-            <p class="font-orbitron text-lg md:text-xl text-cyan-300 tracking-wider">
-                表現祭 2025 <span class="text-base text-gray-400 font-normal">(Hyogen Festival)</span>
-            </p>
-            <p class="text-gray-400 mt-2">4年D組 企画</p>
-    
+<body class="antialiased">
+    <div id="hero" class="flex flex-col items-center justify-center text-center p-4 transition-opacity duration-1000" style="background-image: url('TSU413023_TP_V.png');">
+        <div class="relative z-10">
+            <header class="mb-4">
+                <p class="text-gray-300">表現祭 2025</p>
+                <div class="w-24 h-px bg-cyan-400/30 mx-auto my-2 rounded-full"></div>
+                <p class="text-gray-400 mt-2">4年D組 企画</p>
+            </header>
+            
             <div class="my-6">
                 <h1 class="font-orbitron text-6xl md:text-8xl font-bold uppercase tracking-widest relative glitch leading-tight" data-text="俺だけ">
                     俺だけ
@@ -145,111 +96,61 @@
                     オフライン
                 </h1>
             </div>
-    
-            <div class="w-32 h-px bg-cyan-400/50 mx-auto mb-8 rounded-full"></div>
-    
-            <p class="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
-                テクノロジーに支配された世界で、ただ一人"接続"されていないあなた。<br class="hidden sm:block">
-                その目に映る真実とは──。
-            </p>
-        </div>
-    </header>
 
-    <!-- Enter Button Container -->
-    <div id="enter-container" class="text-center py-10 transition-opacity duration-500">
-        <button id="enter-button" class="font-orbitron text-lg tracking-widest bg-transparent border-2 border-cyan-400 text-cyan-400 py-3 px-10 rounded-lg hover:bg-cyan-400/20 hover:shadow-[0_0_15px_rgba(0,191,255,0.5)] transition-all duration-300">
-            ENTER
-        </button>
+            <button id="enter-button" class="font-orbitron mt-8 px-8 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 uppercase tracking-widest rounded-lg transition-all duration-300 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_theme(colors.cyan.400)]">
+                Enter
+            </button>
+        </div>
     </div>
 
-    <!-- Main Content (hidden initially) -->
-    <main id="story-content" class="container mx-auto px-4 pb-20 hidden">
+    <main id="main-content" class="hidden opacity-0 transition-opacity duration-1000 py-16 px-4">
         <div class="max-w-4xl mx-auto">
-
-            <!-- Attraction Story -->
-            <section id="story-card" class="card">
-                <div class="p-8 md:p-12">
-                    <div class="text-gray-200 leading-loose space-y-12">
-                        
-                        <!-- Section 1: 3020 -->
-                        <div class="relative text-center py-8">
-                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-orbitron text-8xl md:text-9xl font-black text-white opacity-5 select-none pointer-events-none">3020</span>
-                            <div class="relative space-y-4">
-                                <p class="text-xl font-bold text-red-400">3020年代、世界は混沌の極みにあった。</p>
-                                <p>環境破壊、社会の分裂、資源を巡る争い…。<br class="hidden sm:block">人類が目先の利益を追い続けた結果、世界は崩壊寸前だった。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="divider"></div>
-
-                        <!-- Section 2: Y -->
-                        <div class="relative text-center py-8">
-                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-orbitron text-9xl md:text-[12rem] font-black text-white opacity-5 select-none pointer-events-none">Y</span>
-                             <div class="relative space-y-4">
-                                <p class="text-xl font-bold text-cyan-300">その起死回生の一手として、統治AI「Y」が生まれる。</p>
-                                <p>「人類の幸福最大化」を掲げたYは、社会のあらゆる問題を解決。<br>犯罪、戦争、失業者すらいない、完璧な理想郷を創り上げた。</p>
-                                <p>しかし、その代償は人間の「自由」。<br>職業、恋愛、人生の全てをYが“最適化”し、疑問を抱く者は再教育施設へと送られる。<br>人々は与えられた安全な人生を歩むだけの存在となった。</p>
-                             </div>
-                        </div>
-
-                        <div class="divider"></div>
-                        
-                        <!-- Section 3: 3044 -->
-                        <div class="relative text-center py-8">
-                             <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-orbitron text-8xl md:text-9xl font-black text-white opacity-5 select-none pointer-events-none">3044</span>
-                             <div class="relative space-y-4">
-                                <p class="text-lg font-bold font-orbitron">西暦 3044年</p>
-                                <p>ほとんどの人間がこの完璧な世界を受け入れている中、<br class="hidden sm:block">ごく一部の心には、まだ「違和感」という名の意志が燻っていた。</p>
-                             </div>
-                        </div>
-                        
-                        <p class="text-2xl font-bold text-center !mt-16 text-white neon-text-blue">あなただけが、この世界の真実に気づいている。</p>
-                    </div>
+            <div class="content-card rounded-2xl shadow-2xl p-6 md:p-10 overflow-hidden">
+                <!-- Story Section -->
+                <div class="relative space-y-7 leading-loose text-gray-300">
+                    <section class="relative py-8 z-10">
+                        <p class="story-bg-text font-orbitron">3020</p>
+                        <p>3020年代、世界は人類史上最悪の混沌に陥っていた。傲慢、強欲、無関心、、、。環境破壊により気候変動が加速し、格差の拡大で社会が分裂、各地で資源争奪戦が勃発していた。しかし、人類は目先の利益追求を辞めることはなかった。</p>
+                    </section>
+                    <section class="relative py-8 z-10">
+                        <p class="story-bg-text font-orbitron">Y</p>
+                        <p>そんな中、統治AI「Y」が登場し、「人類の幸福最大化」の名のもとに本格的な社会管理を開始した。犯罪予防、職業配置、結婚相手の選定など、あらゆる人生の選択をYが最適化するようになった。反対する者は「精神異常者」としてセラピーという名の再教育施設送りとなり、次第に社会に疑問を抱くものなどいなくなっていった。</p>
+                    </section>
+                    <section class="relative py-8 z-10">
+                         <p class="story-bg-text font-orbitron">3044</p>
+                        <p>気づけば、人間は保護される存在となり、Yが用意した完璧で安全な人生を歩むことになったのである。この世界は犯罪も戦争も失業者すらいない理想社会。しかし、そこは自由に恋をし、夢を追い、自分の道を選ぶ者の姿はなかった。</p>
+                        <p class="font-bold text-white">3044年、ほとんどの人はこの状況を当然と受け入れているが、ごく少数の人々の心は、まだ違和感という意志を持ち合わせていた。</p>
+                    </section>
                 </div>
-                <div class="bg-gray-900/50 px-8 py-5 border-t border-cyan-400/30 text-center rounded-b-lg">
-                    <p class="font-orbitron text-cyan-300 text-lg">LOCATION</p>
-                    <p class="text-xl mt-1">グリーンゾーンS2階 4年D組教室</p>
-                    <p class="text-sm text-gray-400 mt-2">体験型脱出＆展示アトラクション</p>
-                </div>
-            </section>
 
+                 <!-- Character Page Link Button -->
+                <div class="text-center mt-12 border-t border-white/10 pt-8">
+                    <a href="characters.html" class="font-orbitron px-8 py-3 bg-fuchsia-500 text-white uppercase tracking-widest rounded-lg transition-all duration-300 hover:bg-fuchsia-600 hover:shadow-[0_0_20px_theme(colors.fuchsia.500)]">
+                        登場人物を見る
+                    </a>
+                    <p class="text-sm text-gray-500 mt-3">物語の登場人物と背景はこちら</p>
+                </div>
+            </div>
+
+            <footer class="text-center mt-12 pb-8">
+                <p class="text-gray-600">© 2025 Hyogen Festival - Class 4D</p>
+                <p class="text-gray-700 text-sm mt-2">グリーンゾーンS2階 4年D組教室</p>
+            </footer>
         </div>
     </main>
-    
-    <!-- Footer -->
-    <footer class="text-center py-8 mt-12 border-t border-gray-800">
-        <p class="font-orbitron text-gray-500">&copy; 2025 表現祭 4年D組企画</p>
-    </footer>
 
     <script>
-        const enterButton = document.getElementById('enter-button');
-        const enterContainer = document.getElementById('enter-container');
-        const storyContent = document.getElementById('story-content');
-        const storyCard = document.getElementById('story-card');
-        const titleBackground = document.getElementById('title-background');
-
-        enterButton.addEventListener('click', () => {
-            // 背景画像をフェードアウトさせる
-            if (titleBackground) {
-                titleBackground.classList.add('opacity-0');
-            }
-
-            // ボタンをフェードアウトさせる
-            enterContainer.classList.add('opacity-0');
-            
-            // フェードアウトアニメーション完了後に要素を完全に隠す
+        document.getElementById('enter-button').addEventListener('click', () => {
+            const hero = document.getElementById('hero');
+            const main = document.getElementById('main-content');
+            hero.classList.add('opacity-0');
             setTimeout(() => {
-                enterContainer.style.display = 'none';
-            }, 500);
-
-            // ストーリーコンテンツを表示する
-            storyContent.classList.remove('hidden');
-
-            // カードにフェードインアニメーションクラスを追加する
-            storyCard.classList.add('fade-in');
+                hero.style.display = 'none';
+                main.style.display = 'block';
+                setTimeout(() => main.classList.remove('opacity-0'), 50);
+            }, 1000);
         });
     </script>
 </body>
 </html>
-
 
