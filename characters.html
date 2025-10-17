@@ -20,18 +20,6 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .story-bg-text {
-            position: absolute;
-            font-size: 14rem;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.03);
-            z-index: -1;
-            pointer-events: none;
-            user-select: none;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -54,37 +42,15 @@
             <section>
                 <h1 class="font-orbitron text-3xl md:text-4xl text-center font-bold mb-8 text-fuchsia-500 tracking-widest">CHARACTERS</h1>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Character 1: Cyborg -->
-                    <div class="content-card rounded-2xl shadow-lg overflow-hidden text-center p-6 transform hover:scale-105 transition-transform duration-300">
-                        <img src="1760703928886.jpg" alt="サイボーグ" class="w-40 h-40 rounded-full mx-auto border-4 border-fuchsia-500/50">
-                        <h2 class="font-orbitron text-2xl font-bold mt-4">サイボーグ</h2>
-                        <p class="text-sm text-gray-400">年齢: 22歳 / 性別: 男</p>
-                        <blockquote class="text-lg italic my-4 border-l-4 border-fuchsia-500/50 pl-4">
-                            「どれぐらいの時間が経ったのかはわからない。だが、目が覚めるまでの間に俺はサイボーグへと変わっていた。」
-                        </blockquote>
-                        <p class="text-gray-400 text-sm">3030年、ある少年は家族を失い、サイボーグとして生まれ変わった。14年後、記憶のない夜が続く。その夜に一体何が起こっているのか。結末はあなたの目で確かめてください。</p>
+                    <!-- Character Images -->
+                    <div class="transform hover:scale-105 transition-transform duration-300">
+                        <img src="1760703928886.jpg" alt="キャラクタープロフィール1：サイボーグ" class="rounded-lg shadow-lg border-2 border-fuchsia-500/30">
                     </div>
-
-                    <!-- Character 2: AI Researcher -->
-                    <div class="content-card rounded-2xl shadow-lg overflow-hidden text-center p-6 transform hover:scale-105 transition-transform duration-300">
-                        <img src="1760703929017.jpg" alt="AI研究者" class="w-40 h-40 rounded-full mx-auto border-4 border-fuchsia-500/50">
-                        <h2 class="font-orbitron text-2xl font-bold mt-4">AI研究者</h2>
-                        <p class="text-sm text-gray-400">年齢: 44歳 / 性別: 男</p>
-                        <blockquote class="text-lg italic my-4 border-l-4 border-fuchsia-500/50 pl-4">
-                            「やめろ・・・やめてくれ・・・俺は・・・ただ、怖かったんだ・・・」
-                        </blockquote>
-                        <p class="text-gray-400 text-sm">1人の研究者はYというAIの組織の下部組織に勤めていた。ある日彼が目にした次期社会モデル「プロジェクト・エデン」そしてそこで見た驚愕の事実。その内容とは！！！！！？？？？</p>
+                    <div class="transform hover:scale-105 transition-transform duration-300">
+                        <img src="1760703929017.jpg" alt="キャラクタープロフィール2：AI研究者" class="rounded-lg shadow-lg border-2 border-fuchsia-500/30">
                     </div>
-
-                    <!-- Character 3: Artist -->
-                    <div class="content-card rounded-2xl shadow-lg overflow-hidden text-center p-6 transform hover:scale-105 transition-transform duration-300">
-                        <img src="1760703929044.jpg" alt="芸術家" class="w-40 h-40 rounded-full mx-auto border-4 border-fuchsia-500/50">
-                        <h2 class="font-orbitron text-2xl font-bold mt-4">芸術家</h2>
-                        <p class="text-sm text-gray-400">年齢: 28歳 / 性別: 男</p>
-                        <blockquote class="text-lg italic my-4 border-l-4 border-fuchsia-500/50 pl-4">
-                            「非効率は醜いか、、？」
-                        </blockquote>
-                        <p class="text-gray-400 text-sm">完璧な平和か、不完全な自由か。Yに創作を否定され続けた元画家志望の青年は、廃墟で出会った表現者たちと共に、人間の魂を賭けた選択を迫られる！</p>
+                    <div class="transform hover:scale-105 transition-transform duration-300">
+                        <img src="1760703929044.jpg" alt="キャラクタープロフィール3：芸術家" class="rounded-lg shadow-lg border-2 border-fuchsia-500/30">
                     </div>
                 </div>
             </section>
